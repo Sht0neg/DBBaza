@@ -13,10 +13,12 @@ namespace DZ
         private void Form1_Load(object sender, EventArgs e)
         {
             context = new Context();
+            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.Employees.Load();
 
             employeeBindingSource.DataSource = context.Employees.Local.ToBindingList();
+            companyBindingSource.DataSource = context.Companies.Local.ToBindingList();
         }
     }
 }

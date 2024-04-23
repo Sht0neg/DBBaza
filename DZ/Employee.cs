@@ -3,7 +3,7 @@ namespace DZ
 {
     public class Employee
     {
-        public int? Id { get; set; }
+        public int? EmployeeId { get; set; }
 
         public string FirstName { get; set; }
 
@@ -17,5 +17,9 @@ namespace DZ
         public bool Married { get; set; }
 
         public bool HadChildren { get; set; }
+
+        public int CompanyId { get; set; }
+
+        public virtual Company Company { get; set; } = null!;
     }
 }
