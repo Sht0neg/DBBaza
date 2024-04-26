@@ -16,9 +16,11 @@ namespace DZ
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.Employees.Load();
+            context.Companies.Load();
 
             employeeBindingSource.DataSource = context.Employees.Local.ToBindingList();
             companyBindingSource.DataSource = context.Companies.Local.ToBindingList();
         }
+
     }
 }

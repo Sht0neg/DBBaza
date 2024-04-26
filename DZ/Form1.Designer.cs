@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             secondNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ageDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -39,11 +38,10 @@
             hadChildrenDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             employeeBindingSource = new BindingSource(components);
             dataGridView2 = new DataGridView();
-            companyBindingSource = new BindingSource(components);
-            idDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dataDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             specialisationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            companyBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeeBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -54,18 +52,12 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, secondNameDataGridViewTextBoxColumn, ageDataGridViewTextBoxColumn, positionDataGridViewTextBoxColumn, marriedDataGridViewCheckBoxColumn, hadChildrenDataGridViewCheckBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { firstNameDataGridViewTextBoxColumn, secondNameDataGridViewTextBoxColumn, ageDataGridViewTextBoxColumn, positionDataGridViewTextBoxColumn, marriedDataGridViewCheckBoxColumn, hadChildrenDataGridViewCheckBoxColumn });
             dataGridView1.DataSource = employeeBindingSource;
             dataGridView1.Location = new Point(27, 22);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(638, 467);
             dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -111,22 +103,12 @@
             // 
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, nameDataGridViewTextBoxColumn, dataDataGridViewTextBoxColumn, specialisationDataGridViewTextBoxColumn });
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { nameDataGridViewTextBoxColumn, dataDataGridViewTextBoxColumn, specialisationDataGridViewTextBoxColumn });
             dataGridView2.DataSource = companyBindingSource;
             dataGridView2.Location = new Point(685, 22);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(481, 467);
             dataGridView2.TabIndex = 1;
-            // 
-            // companyBindingSource
-            // 
-            companyBindingSource.DataSource = typeof(Company);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -145,6 +127,10 @@
             specialisationDataGridViewTextBoxColumn.DataPropertyName = "Specialisation";
             specialisationDataGridViewTextBoxColumn.HeaderText = "Specialisation";
             specialisationDataGridViewTextBoxColumn.Name = "specialisationDataGridViewTextBoxColumn";
+            // 
+            // companyBindingSource
+            // 
+            companyBindingSource.DataSource = typeof(Company);
             // 
             // Form1
             // 
